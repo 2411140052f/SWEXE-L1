@@ -1,0 +1,2 @@
+class Fuku < ApplicationRecord
+end

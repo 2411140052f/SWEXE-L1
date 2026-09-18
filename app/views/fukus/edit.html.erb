@@ -1,0 +1,21 @@
+<h1>服の編集</h1>
+
+<%= form_with model: @fuku, local: true do |form| %>
+  <div>
+    <%= form.label :name, "名前" %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :price, "価格" %><br>
+    <%= form.number_field :price %>
+  </div>
+  <div>
+    <%= form.label :url, "URL" %><br>
+    <%= form.text_field :url %>
+  </div>
+  <div>
+    <%= form.submit "更新" %>
+  </div>
+<% end %>
+
+<%= link_to '一覧に戻る', fukus_path %>

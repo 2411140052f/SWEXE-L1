@@ -1,0 +1,13 @@
+<h1>ほしい服一覧</h1>
+<%= link_to '新規登録', new_fuku_path %>
+
+<ul>
+  <% @fukus.each do |fuku| %>
+    <li>
+      <%= fuku.name %> - <%= fuku.price %>円
+      <%= link_to '詳細', fuku_path(fuku) %>
+      <%= link_to '編集', edit_fuku_path(fuku) %>
+      <%= button_to '削除', fuku_path(fuku), method: :delete %>
+    </li>
+  <% end %>
+</ul>

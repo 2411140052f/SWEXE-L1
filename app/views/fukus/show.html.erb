@@ -1,0 +1,6 @@
+<h1>服の詳細</h1>
+<p>名前: <%= @fuku.name %></p>
+<p>価格: <%= @fuku.price %>円</p>
+<p>URL: <%= link_to @fuku.url, @fuku.url %></p>
+
+<%= link_to '一覧に戻る', fukus_path %>
