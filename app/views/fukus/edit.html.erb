@@ -1,21 +1,30 @@
 <h1>服の編集</h1>
 
-<%= form_with model: @fuku, local: true do |form| %>
-  <div>
-    <%= form.label :name, "名前" %><br>
-    <%= form.text_field :name %>
-  </div>
-  <div>
-    <%= form.label :price, "価格" %><br>
-    <%= form.number_field :price %>
-  </div>
-  <div>
-    <%= form.label :url, "URL" %><br>
-    <%= form.text_field :url %>
-  </div>
-  <div>
-    <%= form.submit "更新" %>
+<% if @fuku.errors.any? %>
+  <div class="error-panel" role="alert">
+    <strong>入力内容を確認してください</strong>
+    <ul>
+      <% @fuku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
 
-<%= link_to '一覧に戻る', fukus_path %>
+<%= form_with model: @fuku, local: true, class: "form-card" do |form| %>
+  <div class="field">
+    <%= form.label :name, "名前" %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= form.label :price, "価格" %><br>
+    <%= form.number_field :price %>
+  </div>
+  <div class="field">
+    <%= form.label :url, "URL" %><br>
+    <%= form.text_field :url %>
+  </div>
+  <%= form.submit "更新" %>
+<% end %>
+
+<%= link_to '一覧に戻る', fukus_path, class: "back-link" %>

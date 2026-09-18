@@ -23,6 +23,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="site-header">
+      <%= link_to "ほしい服", fukus_path, class: "brand" %>
+    </header>
+    <% flash.each do |type, message| %>
+      <p class="flash <%= type %>"><%= message %></p>
+    <% end %>
+    <main class="site-main">
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -18,7 +18,7 @@ class FukusController < ApplicationController
   def create
     @fuku = Fuku.new(fuku_params)
     if @fuku.save
-      redirect_to fukus_path # サイトでいう res.set_redirect に相当
+      redirect_to fukus_path, notice: "服を登録しました"
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class FukusController < ApplicationController
   def update
     @fuku = Fuku.find(params[:id])
     if @fuku.update(fuku_params)
-      redirect_to fukus_path
+      redirect_to fukus_path, notice: "服を更新しました"
     else
       render :edit, status: :unprocessable_entity
     end

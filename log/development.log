@@ -625,3 +625,217 @@ Processing by FukusController#index as HTML
 Completed 200 OK in 54ms (Views: 18.4ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 2.1ms)
 
 
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/" for 157.13.36.14 at 2026-09-18 05:54:50 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='L1Kisokadai'*/[0m
+Processing by FukusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/index.html.erb within layouts/application
+  [1m[36mFuku Load (1.3ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" /*action='index',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/views/fukus/index.html.erb:6
+  Rendered fukus/index.html.erb within layouts/application (Duration: 21.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | GC: 0.0ms)
+Completed 200 OK in 56ms (Views: 30.0ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/fukus/new" for 157.13.36.14 at 2026-09-18 05:55:17 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 13.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fukus" for 157.13.36.14 at 2026-09-18 05:55:38 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/index.html.erb within layouts/application
+  [1m[36mFuku Load (0.2ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" /*action='index',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/views/fukus/index.html.erb:6
+  Rendered fukus/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fukus/3" for 157.13.36.14 at 2026-09-18 05:55:41 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mFuku Load (0.1ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" WHERE "fukus"."id" = 3 LIMIT 1 /*action='show',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/controllers/fukus_controller.rb:9:in 'FukusController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/show.html.erb within layouts/application
+  Rendered fukus/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fukus" for 157.13.36.14 at 2026-09-18 05:55:58 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/index.html.erb within layouts/application
+  [1m[36mFuku Load (0.2ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" /*action='index',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/views/fukus/index.html.erb:6
+  Rendered fukus/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fukus/3/edit" for 157.13.36.14 at 2026-09-18 05:56:01 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#edit as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mFuku Load (0.1ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" WHERE "fukus"."id" = 3 LIMIT 1 /*action='edit',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/controllers/fukus_controller.rb:29:in 'FukusController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/edit.html.erb within layouts/application
+  Rendered fukus/edit.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fukus" for 157.13.36.14 at 2026-09-18 05:56:28 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/index.html.erb within layouts/application
+  [1m[36mFuku Load (0.1ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" /*action='index',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/views/fukus/index.html.erb:6
+  Rendered fukus/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/" for 157.13.36.14 at 2026-09-18 06:04:23 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='L1Kisokadai'*/[0m
+Processing by FukusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/index.html.erb within layouts/application
+  [1m[36mFuku Load (1.3ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" /*action='index',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/views/fukus/index.html.erb:6
+  Rendered fukus/index.html.erb within layouts/application (Duration: 14.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 21.7ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/fukus/new" for 157.13.36.14 at 2026-09-18 06:04:27 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/fukus" for 157.13.36.14 at 2026-09-18 06:04:34 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "fuku" => {"name" => "", "price" => "1000", "url" => "http"}, "commit" => "登録"}
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/fukus" for 157.13.36.14 at 2026-09-18 06:06:54 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "fuku" => {"name" => "", "price" => "1000", "url" => "http"}, "commit" => "登録"}
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 13ms (Views: 5.9ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/fukus" for 157.13.36.14 at 2026-09-18 06:10:18 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "fuku" => {"name" => "", "price" => "1000", "url" => "http"}, "commit" => "登録"}
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 16ms (Views: 6.6ms | ActiveRecord: 2.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fukus" for 157.13.36.14 at 2026-09-18 06:10:45 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/index.html.erb within layouts/application
+  [1m[36mFuku Load (0.2ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" /*action='index',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/views/fukus/index.html.erb:6
+  Rendered fukus/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fukus/new" for 157.13.36.14 at 2026-09-18 06:10:47 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/fukus" for 157.13.36.14 at 2026-09-18 06:10:55 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "fuku" => {"name" => "", "price" => "1", "url" => "h"}, "commit" => "登録"}
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/fukus" for 157.13.36.14 at 2026-09-18 06:12:52 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "fuku" => {"name" => "", "price" => "1", "url" => "h"}, "commit" => "登録"}
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/new.html.erb within layouts/application
+  Rendered fukus/new.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 31ms (Views: 10.8ms | ActiveRecord: 5.1ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+Started POST "/fukus" for 157.13.36.14 at 2026-09-18 06:15:18 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "fuku" => {"name" => "PRX ROCKS カオス フーディー", "price" => "11400", "url" => "https://shop.pprx.team/ja-jp/products/prx-rocks-hoodie"}, "commit" => "登録"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/controllers/fukus_controller.rb:20:in 'FukusController#create'
+  [1m[36mFuku Create (1.7ms)[0m  [1m[32mINSERT INTO "fukus" ("name", "price", "url", "created_at", "updated_at") VALUES ('PRX ROCKS カオス フーディー', 11400, 'https://shop.pprx.team/ja-jp/products/prx-rocks-hoodie', '2026-09-18 06:15:18.364554', '2026-09-18 06:15:18.364554') RETURNING "id" /*action='create',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/controllers/fukus_controller.rb:20:in 'FukusController#create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/controllers/fukus_controller.rb:20:in 'FukusController#create'
+Redirected to https://cautious-winner-p7w7pvxr446xhrxrq-3000.app.github.dev/fukus
+↳ app/controllers/fukus_controller.rb:21:in 'FukusController#create'
+Completed 302 Found in 22ms (ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/fukus" for 157.13.36.14 at 2026-09-18 06:15:18 +0000
+Cannot render console from 157.13.36.14! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by FukusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fukus/index.html.erb within layouts/application
+  [1m[36mFuku Load (0.3ms)[0m  [1m[34mSELECT "fukus".* FROM "fukus" /*action='index',application='L1Kisokadai',controller='fukus'*/[0m
+  ↳ app/views/fukus/index.html.erb:6
+  Rendered fukus/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
