@@ -24,13 +24,46 @@
 
   <body>
     <header class="site-header">
-      <%= link_to "ほしい服", fukus_path, class: "brand" %>
+      <div class="header-inner">
+        <%= link_to fukus_path, class: "brand" do %>
+          <span class="brand-mark" aria-hidden="true">F</span>
+          <span>ほしい服</span>
+        <% end %>
+        <p class="header-caption">気になる服を、忘れないように。</p>
+        <%= link_to "＋ 服を登録", new_fuku_path, class: "header-action" %>
+      </div>
     </header>
     <% flash.each do |type, message| %>
       <p class="flash <%= type %>"><%= message %></p>
     <% end %>
-    <main class="site-main">
-      <%= yield %>
-    </main>
+    <div class="page-shell">
+      <aside class="sidebar" aria-label="メインナビゲーション">
+        <p class="sidebar-label">MY WARDROBE</p>
+        <nav class="sidebar-nav">
+          <%= link_to fukus_path, class: "nav-link #{'is-active' if current_page?(fukus_path)}" do %>
+            <span class="nav-indicator" aria-hidden="true"></span>
+            ほしい服一覧
+          <% end %>
+          <%= link_to new_fuku_path, class: "nav-link #{'is-active' if current_page?(new_fuku_path)}" do %>
+            <span class="nav-indicator" aria-hidden="true"></span>
+            服を登録する
+          <% end %>
+        </nav>
+        <section class="sidebar-summary" aria-label="登録状況">
+          <p class="sidebar-label">登録中のアイテム</p>
+          <p class="summary-count"><%= Fuku.count %><span>点</span></p>
+          <p class="summary-note">気になった服をリストに残して、あとから見返せます。</p>
+        </section>
+      </aside>
+      <main class="site-main">
+        <%= yield %>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>ほしい服</span>
+        <span>お気に入りの一着を、ゆっくり見つけよう。</span>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,16 +1,32 @@
-<h1>ほしい服一覧</h1>
-<%= link_to '＋ 新規登録', new_fuku_path, class: "button-link" %>
+<div class="page-heading">
+  <div>
+    <p class="eyebrow">YOUR WISHLIST</p>
+    <h1>ほしい服一覧</h1>
+    <p class="page-description">気になったアイテムを集めて、いつでも見返せるリストです。</p>
+  </div>
+  <p class="item-count"><strong><%= @fukus.size %></strong> 点</p>
+</div>
+<%= link_to '＋ 新しい服を登録', new_fuku_path, class: "button-link" %>
 
-<ul class="fuku-list">
-  <% @fukus.each do |fuku| %>
-    <li>
-      <span class="fuku-name"><%= fuku.name %></span>
-      <span><%= fuku.price %>円</span>
-      <span class="fuku-actions">
-        <%= link_to '詳細', fuku_path(fuku) %>
-        <%= link_to '編集', edit_fuku_path(fuku) %>
-        <%= button_to '削除', fuku_path(fuku), method: :delete, class: "delete-button" %>
-      </span>
-    </li>
-  <% end %>
-</ul>
+<% if @fukus.any? %>
+  <ul class="fuku-list">
+    <% @fukus.each do |fuku| %>
+      <li>
+        <span class="fuku-name"><%= fuku.name %></span>
+        <span><%= fuku.price %>円</span>
+        <span class="fuku-actions">
+          <%= link_to '詳細', fuku_path(fuku) %>
+          <%= link_to '編集', edit_fuku_path(fuku) %>
+          <%= button_to '削除', fuku_path(fuku), method: :delete, class: "delete-button" %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <section class="empty-state">
+    <p class="empty-mark" aria-hidden="true">＋</p>
+    <h2>リストはまだ空です</h2>
+    <p>気になっている服の名前や価格を登録して、あとから比べられるようにしましょう。</p>
+    <%= link_to '最初の服を登録する', new_fuku_path, class: "button-link" %>
+  </section>
+<% end %>
